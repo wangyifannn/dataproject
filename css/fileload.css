@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+#left.toggled {
+    left: -182px;
+    position: absolute;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    transition: 1s all;
+}
+
+#right.toggled {
+    padding-left: 0px;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    transition: 1s all;
+}
+
+#box {
+    display: flex;
+    height: 758px;
+}
+
+#box .head {
+    background: rgb(2, 76, 171);
+}
+
+#left {
+    width: 10%;
+    min-width: 182px;
+    height: 758px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    transition: 1s all;
+    box-shadow: 0px 0px 9px #999;
+}
+
+#right {
+    padding-left: 182px;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    transition: 1s all;
+}
+
+#left .left-head {
+    height: 102px;
+    position: relative;
+    color: white;
+}
+
+#left .left-head .img-logo {
+    margin: 10%;
+}
+
+.header_tit span {
+    margin: 13px 0px 0px 32px;
+    display: inline-block;
+}
+
+#left .left-head .img-line {
+    position: fixed;
+    top: 17px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#left .left-body {
+    position: relative;
+    color: #666;
+}
+
+#left .bar {
+    width: 3px;
+    height: 47px;
+    background: rgb(28, 94, 181);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#left .left-body>div {
+    height: 47px;
+    line-height: 47px;
+}
+
+.clickColor {
+    color: #024caa;
+    background: rgb(224, 237, 253);
+}
+
+.nav-tabs>li {
+    width: 100%;
+    line-height: 47px;
+    height: 47px;
+    cursor: pointer;
+}
+
+#left .left-body>ul li:hover {
+    color: #024caa;
+    background: rgba(224, 237, 253);
+}
+
+#left .left-body span {
+    margin-left: 10px;
+    font-family: MicrosoftYaHei-bold;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+#right {
+    width: 90%;
+    min-width: 800px;
+    height: 590px;
+    flex: 1;
+}
+
+#right .right-head {
+    height: 50px;
+}
+
+#right .right-head span {
+    font-family: MicrosoftYaHei-bold;
+    font-size: 13px;
+    color: #fff;
+}
+
+#right #right-head-title {
+    float: left;
+    padding: 15px 37px;
+}
+
+#right .fr {
+    float: right;
+    position: relative;
+}
+
+#right .img-search {
+    position: absolute;
+    top: 18px;
+    right: 365px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#right #search {
+    width: 232px;
+    height: 31px;
+    border: 1px solid rgba(255, 154, 255);
+    border-radius: 25px;
+    outline: none;
+    position: absolute;
+    top: 10px;
+    right: 160px;
+    text-indent: 30px;
+    box-sizing: border-box;
+}
+
+#right .user {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+}
+
+#right .down {
+    padding: 25px 40px 10px 10px;
+}
+
+#right .clear {
+    clear: both;
+}
+
+#right .fr span {
+    position: absolute;
+    top: 18px;
+    right: 55px;
+    width: 40px;
+}
+
+#right .fr>div {
+    display: inline-block;
+}
+
+#right #right-middle,
+#right #right-body {
+    max-width: 1140px;
+    margin: 20px 0 0 20px;
+    box-shadow: 0 0 7px #999;
+}
+
+#right #right-middle {
+    height: 55px;
+    width: 100%;
+}
+
+#right #right-body {
+    min-width: 100%;
+    margin-top: 23px;
+    height: 633px;
+}
+
+#right #right-middle label {
+    font-family: MicrosoftYaHei-bold;
+    font-size: 14px;
+    color: #333;
+    padding-right: 10px;
+}
+
+#right #right-middle>div {
+    padding: 16px;
+    width: 100%;
+}
+
+#right #right-middle input {
+    width: 117px;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid rgba(188, 212, 244);
+    outline: none;
+    margin-right: 40px;
+}
+
+#right #right-middle button {
+    width: 64px;
+    height: 24px;
+    background: rgba(2, 76, 171);
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+#right #right-body table {
+    width: 100%;
+    border: 1px solid rgba(218, 234, 255);
+    border-collapse: collapse;
+}
+
+#right #right-body table th {
+    font-family: MicrosoftYaHei-bold;
+    font-size: 14px;
+    color: #333;
+    height: 37px;
+    background: #e0eefe;
+}
+
+#right #right-body table tr {
+    height: 37px;
+}

@@ -1,0 +1,78 @@
+[{
+        "mid": 1,
+        "name": "车辆与终端",
+        "url": "glyphicon glyphicon-cloud",
+        "priority": "1",
+        "remark": "gps",
+        "createTime": "2018-03-08",
+        "operator": "王春森",
+        "operate_ip": "192.168.1.1",
+        "childrenMenus": [{
+                "mid": 101,
+                "name": "车辆信息",
+                "url": "CarInfo",
+                "priority": "2",
+                "remark": "地图",
+                "createTime": "2018-03-08",
+                "operator": "王春森",
+                "operate_ip": "192.168.1.1",
+                "childrenMenus": []
+            },
+            {
+                "mid": 102,
+                "name": "终端信息",
+                "url": "TerInfo",
+                "priority": "2",
+                "remark": "地图",
+                "createTime": "2018-03-08",
+                "operator": "王春森",
+                "operate_ip": "192.168.1.1",
+                "childrenMenus": []
+            },
+            {
+                "mid": 103,
+                "name": "车辆与终端绑定",
+                "url": "carTerminalBind",
+                "priority": "3",
+                "remark": "轨迹",
+                "createTime": "2018-03-08",
+                "operator": "王春森",
+                "operate_ip": "192.168.1.1",
+                "childrenMenus": []
+            }
+        ]
+    },
+    {
+        "mid": 2,
+        "name": "数据管理",
+        "url": "glyphicon glyphicon-signal",
+        "priority": "1",
+        "remark": "数据管理",
+        "createTime": "2018-03-08",
+        "operator": "王春森",
+        "operate_ip": "192.168.1.1",
+        "childrenMenus": [{
+                "mid": 202,
+                "name": "数据采集",
+                "url": "dataGather",
+                "priority": "3",
+                "remark": "车辆出入管理",
+                "createTime": "2018-03-08",
+                "operator": "王春森",
+                "operate_ip": "192.168.1.1",
+                "childrenMenus": []
+            },
+            {
+                "mid": 201,
+                "name": "文件下载",
+                "url": "dataDown",
+                "priority": "2",
+                "remark": "车辆出入管理",
+                "createTime": "2018-03-08",
+                "operator": "王春森",
+                "operate_ip": "192.168.1.1",
+                "childrenMenus": []
+            }
+        ]
+    }
+]

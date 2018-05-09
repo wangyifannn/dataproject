@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!--在IE浏览器中运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <!--初始化移动浏览器显示-->
+    <link href="../css/bootstrap-3.3.7.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/login.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <img class="bg" src="../img/login/bg.png" alt="">
+        <img class="logo_img" src="../img/login/logo.png" alt="">
+        <div class="containers">
+            <div class="nav">
+                <img class="icon_left" src="../img/login/icon_left.png" alt="">
+                <span class="subject">用户登录</span>
+                <img class="icon_right" src="../img/login/icon_right.png" alt="">
+            </div>
+            <div class="content">
+                <div class="input_box">
+                    <input type="text" class="user_input" placeholder="请输入用户名">
+                </div>
+
+                <div class="input_box">
+                    <input autocomplete="off" class="pass_input" type="password" name="" value="" minlength="6" maxlength="16" placeholder="请输入管理员密码">
+                    <i class="eye_logo glyphicon glyphicon-eye-close"></i>
+                </div>
+                <div class="input_box vercode_group">
+                    <input class="vercode_input" type="text" name="" placeholder="验证码"><img src="../img/logo.png" class="vercode" alt="">
+                </div>
+                <div class="input_group">
+                    <input id="rember" class="eng_radio" type="checkbox" name="autologin">&nbsp;&nbsp; 下次自动登录
+                </div>
+                <div class="input_group">
+                    <input class="login_btn" type="button" value="登录">
+                </div>
+                <p class="input_group logintips"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/login.js"></script>
+<script type="text/javascript">
+    var pass = document.getElementsByClassName("pass")[0];
+    $(document).ready(function() {
+        // 密码是否可见
+        var flag = false;
+        $(".eye_logo").click(function() {
+            if (flag == false) {
+                $(".eye_logo").attr("class", "eye_logo glyphicon glyphicon-eye-open");
+                pass.type = "text";
+                flag = true;
+            } else {
+                $(".eye_logo").attr("class", "eye_logo glyphicon glyphicon-eye-close");
+
+                pass.type = "password";
+                flag = false;
+            }
+        });
+    });
+    //密码验证
+    // var $input_box = $('.input_box');
+    // $input_box.find('input')
+    //     $(".pass").bind('input porpertychange', function() {
+    //         var tips = document.getElementsByClassName("tips")[0];
+    //         var pw1Num = $(this).val();
+    //         // var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{6,16}$/g; //密码必须有大小写字母和数字且6-20位
+    //         var re = /^[0-9a-zA-Z_]{6,16}$/g; //密码由大小写字母或数字组成且为6-20位
+    //         var rez = re.test(pw1Num);
+    //         console.log(pw1Num);
+    //         if (rez == true) {
+    //             tips.style.display = 'block';
+    //             tips.innerHTML = '格式正确';
+    //         } else if (pw1Num == '') {
+    //             tips.style.display = 'block';
+    //             tips.innerHTML = '密码不能为空';
+    //         } else {
+    //             tips.style.display = 'block';
+    //         }
+    //     });
+
+    //     // 点击登录按钮进行判断
+    //     // window.sessionStorage.LoginStatus = "false";
+    //     sessionStorage.setItem("LoginStatus", false);
+    //     $(".login_btn").click(function() {
+    //             $.ajax({
+    //                 url: "../json/userLogin.json",
+    //                 type: "get",
+    //                 success: function(res) {
+    //                     console.log(res);
+    //                     console.log(res.userInfo.passWord);
+    //                     if (res.status == 0) {
+    //                         // if (res.userInfo.passWord == pass.value) {
+    //                         if ("w88888888" == pass.value) {
+    //                             // alert("登录成功");
+    //                             window.location.href = "../index.html";
+    //                             sessionStorage.setItem("LoginStatus", true);
+    //                         } else {
+    //                             // alert("登录失败");
+    //                             sessionStorage.setItem("LoginStatus", false);
+    //                         }
+    //                         console.log(sessionStorage.getItem("LoginStatus"));
+    //                     }
+    //                 }
+    //             })
+    //         })
+    //         // 登录判断结束
+
+    // })
+</script>
+
+</html>
