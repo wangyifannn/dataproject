@@ -76,7 +76,7 @@
  }
  
  .input_box {
-     width: 28%;
+     width: 25%;
      height: 54px;
      margin: 0 auto;
  }
@@ -96,7 +96,7 @@
  }
  
  .vercode_group input {
-     width: 40%;
+     width: 43%;
      height: 80%;
      background: transparent;
      border: 1px solid #fff;
@@ -106,7 +106,7 @@
  }
  
  .vercode {
-     width: 40%;
+     width: 30%;
      height: 80%;
  }
  
@@ -119,13 +119,9 @@
      cursor: pointer;
  }
  
- .tips {
-     width: 28%;
-     margin: 5px auto 0px;
-     color: red;
-     opacity: 0.7;
-     display: none;
-     text-indent: 1.5rem;
+ .logintips {
+     color: red !important;
+     text-align: center;
  }
  
  .login_btn {
@@ -146,8 +142,12 @@
      background-size: 100% 100%;
  }
  
+ .vercode_group {
+     margin-top: 10px;
+ }
+ 
  .input_group {
-     width: 28%;
+     width: 25%;
      margin: 0 auto;
      color: #fff;
      margin-top: 10px;

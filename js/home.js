@@ -3,11 +3,6 @@ $("#data_gather_type").change(function() {
     var select_v = $(this).children('option:selected').val();
     console.log(select_v);
     $("#gather_model").modal();
-    // if (select_v == "dbc脚本下放") {
-
-    // } else if (select_v == "b2l脚本下放") {
-
-    // }
 });
 // -数据下载-----------------------------------------
 var dataArr = [{
@@ -146,11 +141,9 @@ function creattable(name, arr, titarr) {
 // creattable(".c_data_table", tabtitArr, tabtitA);
 
 $(".c_data.d_header").click(function() {
-    console.log(this);
     $(".con_tab").slideToggle("slow");
 })
 $(".s_data.d_header").click(function() {
-    console.log(this);
     $(".c_data_charts").slideToggle("slow");
 })
 

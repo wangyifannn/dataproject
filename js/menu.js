@@ -51,20 +51,19 @@ function loadMenu() {
                     $(this).parent().addClass("active");
                 }
             });
-            $(".carList").click(function() {
-                $(this).children().css({ color: "#1B6DDA" });
-                $(this).siblings().children().css({ color: "white" });
+            initTerAndCar(allurl + "/data-management/vehicle/findVehicleByTerminalIsNotNull.json", "getUserCar");
+
+            $(".CarInfo").click(function() {
+                initTerAndCar(allurl + "data-management/vehicle/findVehicleByTerminalIsNotNull.json", "getUserCar");
             })
-            $(".maintainLog").click(function() {
-                loadLog("http://192.168.0.222:8080/car-management/log/findCarMaintainLog.action", "日志列表", "#maintainLogTable", "#toolbar_maintainLogTable");
-            })
-            $(".dataLog").click(function() {
-                loadLog("http://192.168.0.222:8080/car-management/log/findCarSystemLog.action", "日志列表", "#sysLogTable", "#toolbar_sysLogTable");
+            $(".TerInfo").click(function() {
+                initTerAndCar(allurl + "/data-management/customer/findTerminalByCustomer.json", "getUserTer");
             });
-            // 车辆管理日志
-            $(".manageLog").click(function() {
-                loadLog("http://192.168.0.222:8080/car-management/log/findCarLog.action", "日志列表", "#carLogTable", "#toolbar_carLogTable");
+            // 车辆与终端绑定
+            $(".carTerminalBind ").click(function() {
+                initTerAndCar(allurl + "/data-management/vehicle/findVehicleByTerminalIsNotNull.json", "getbind");
             });
+
             // 点击选中切换页面并改变面包屑导航路径
             $(".sidebar-submenu ul li").click(function() {
                 if ($(this).parent().parent().parent().hasClass("threeMenu")) {

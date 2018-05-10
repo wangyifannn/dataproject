@@ -1,8 +1,9 @@
 var changecode = 0;
+var allurl = window.allurl = "http://192.168.0.222:8080";
 $(".vercode").click(function() {
     changecode++;
     console.log(this.src);
-    this.src = "/car-management/user/code.action?changecode=" + changecode;
+    this.src = allurl + "/data-management/customer/code?changecode=" + changecode;
 })
 
 var pass = document.getElementsByClassName("pass_input")[0];
@@ -18,26 +19,29 @@ $(document).ready(function() {
     }
     var flag = false;
     var motionLogin = document.getElementsByName("autologin")[0];
+    // $("input:name=['autologin']").prop("checked") == false;
+    motionLogin.setAttribute("checked", true);
 
     function LoginAjax() {
         var logindata = "";
         if (motionLogin.checked) {
             logindata = {
-                "autologin": "true",
+                "remberme": "true",
                 username: $(".user_input").val(),
                 password: $(".pass_input").val(),
-                verifyCode: $(".vercode_input").val()
+                code: $(".vercode_input").val()
             }
         } else {
             logindata = {
+                "remberme": "false",
                 username: $(".user_input").val(),
                 password: $(".pass_input").val(),
-                verifyCode: $(".vercode_input").val()
+                code: $(".vercode_input").val()
             }
         }
         console.log(logindata);
         $.ajax({
-            url: "/user/login.action",
+            url: allurl + "/data-management/customer/login.json",
             type: "get",
             data: logindata,
             dataType: "jsonp",
@@ -49,8 +53,8 @@ $(document).ready(function() {
                     successUser.flag = false;
                 } else {
                     successUser.flag = true;
-                    window.localStorage.successUser = JSON.stringify(data);
-                    window.location.href = '../home.html';
+                    window.localStorage.successUser = JSON.stringify(logindata);
+                    // window.location.href = '../home.html';
                 }
             }
         })
@@ -64,7 +68,6 @@ $(document).ready(function() {
             LoginAjax();
         }
     });
-    $("#rember").prop("checked") == false;
     motionLogin.onclick = function() {
         if (motionLogin.checked) {
             console.log(true);

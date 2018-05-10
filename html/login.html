@@ -32,36 +32,36 @@
                     <i class="eye_logo glyphicon glyphicon-eye-close"></i>
                 </div>
                 <div class="input_box vercode_group">
-                    <input class="vercode_input" type="text" name="" placeholder="验证码"><img src="../img/logo.png" class="vercode" alt="">
+                    <input class="vercode_input" type="text" name="" placeholder="验证码"><img src="http://192.168.0.222:8080/data-management/customer/code" class="vercode " alt=" ">
                 </div>
                 <div class="input_group">
-                    <input id="rember" class="eng_radio" type="checkbox" name="autologin">&nbsp;&nbsp; 下次自动登录
+                    <input type="checkbox" name="autologin">&nbsp;&nbsp; 记住用户名和密码
                 </div>
-                <div class="input_group">
-                    <input class="login_btn" type="button" value="登录">
+                <div class="input_group ">
+                    <button class="login_btn " type="button">登录</button>
                 </div>
-                <p class="input_group logintips"></p>
+                <p class="input_group logintips "></p>
             </div>
         </div>
     </div>
 </body>
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/login.js"></script>
-<script type="text/javascript">
-    var pass = document.getElementsByClassName("pass")[0];
+<script src="../js/jquery.js "></script>
+<script src="../js/bootstrap.min.js "></script>
+<script src="../js/login.js "></script>
+<script type="text/javascript ">
+    var pass = document.getElementsByClassName("pass ")[0];
     $(document).ready(function() {
         // 密码是否可见
         var flag = false;
-        $(".eye_logo").click(function() {
+        $(".eye_logo ").click(function() {
             if (flag == false) {
-                $(".eye_logo").attr("class", "eye_logo glyphicon glyphicon-eye-open");
-                pass.type = "text";
+                $(".eye_logo ").attr("class ", "eye_logo glyphicon glyphicon-eye-open ");
+                pass.type = "text ";
                 flag = true;
             } else {
-                $(".eye_logo").attr("class", "eye_logo glyphicon glyphicon-eye-close");
+                $(".eye_logo ").attr("class ", "eye_logo glyphicon glyphicon-eye-close ");
 
-                pass.type = "password";
+                pass.type = "password ";
                 flag = false;
             }
         });
@@ -69,8 +69,8 @@
     //密码验证
     // var $input_box = $('.input_box');
     // $input_box.find('input')
-    //     $(".pass").bind('input porpertychange', function() {
-    //         var tips = document.getElementsByClassName("tips")[0];
+    //     $(".pass ").bind('input porpertychange', function() {
+    //         var tips = document.getElementsByClassName("tips ")[0];
     //         var pw1Num = $(this).val();
     //         // var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{6,16}$/g; //密码必须有大小写字母和数字且6-20位
     //         var re = /^[0-9a-zA-Z_]{6,16}$/g; //密码由大小写字母或数字组成且为6-20位
@@ -88,26 +88,26 @@
     //     });
 
     //     // 点击登录按钮进行判断
-    //     // window.sessionStorage.LoginStatus = "false";
-    //     sessionStorage.setItem("LoginStatus", false);
-    //     $(".login_btn").click(function() {
+    //     // window.sessionStorage.LoginStatus = "false ";
+    //     sessionStorage.setItem("LoginStatus ", false);
+    //     $(".login_btn ").click(function() {
     //             $.ajax({
-    //                 url: "../json/userLogin.json",
-    //                 type: "get",
+    //                 url: "../json/userLogin.json ",
+    //                 type: "get ",
     //                 success: function(res) {
     //                     console.log(res);
     //                     console.log(res.userInfo.passWord);
     //                     if (res.status == 0) {
     //                         // if (res.userInfo.passWord == pass.value) {
-    //                         if ("w88888888" == pass.value) {
-    //                             // alert("登录成功");
-    //                             window.location.href = "../index.html";
-    //                             sessionStorage.setItem("LoginStatus", true);
+    //                         if ("w88888888 " == pass.value) {
+    //                             // alert("登录成功 ");
+    //                             window.location.href = "../index.html ";
+    //                             sessionStorage.setItem("LoginStatus ", true);
     //                         } else {
-    //                             // alert("登录失败");
-    //                             sessionStorage.setItem("LoginStatus", false);
+    //                             // alert("登录失败 ");
+    //                             sessionStorage.setItem("LoginStatus ", false);
     //                         }
-    //                         console.log(sessionStorage.getItem("LoginStatus"));
+    //                         console.log(sessionStorage.getItem("LoginStatus "));
     //                     }
     //                 }
     //             })

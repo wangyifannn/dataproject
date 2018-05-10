@@ -340,7 +340,8 @@ input.bom_num {
 }
 
 .even_style .form-group:last-child {
-    float: right;
+    width: 100% !important;
+    text-align: right;
 }
 
 .table>thead>tr>th {
