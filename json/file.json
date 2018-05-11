@@ -1,0 +1,25 @@
+[{
+    "name": "文件1",
+    "url": "https://upload-images.jianshu.io/upload_images/7917340-5b0b2fccc8235f67.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/554",
+    "uploadTime": "2018-09-11",
+    "size": "20kb",
+    "remark": "测试"
+}, {
+    "name": "文件2",
+    "url": "https://upload-images.jianshu.io/upload_images/7917340-dc380808bdbb4710.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/640",
+    "uploadTime": "2018-09-11",
+    "size": "20kb",
+    "remark": "测试"
+}, {
+    "name": "文件3",
+    "url": "http://localhost/img/1.jpg",
+    "uploadTime": "2018-09-11",
+    "size": "20kb",
+    "remark": "测试"
+}, {
+    "name": "文件12",
+    "url": "",
+    "uploadTime": "2018-09-11",
+    "size": "20kb",
+    "remark": "测试"
+}]

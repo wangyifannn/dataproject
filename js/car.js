@@ -1,16 +1,16 @@
 // 车辆信息查询条件
 var carInfo_item = [
-    { "name": "车辆编号", "type": "text", "inputName": "vsn" },
+    { "name": "车辆编号", "type": "text", "inputName": "vSn" },
+    { "name": "车牌号", "type": "text", "inputName": "vCarSn" },
     { "name": "VIN", "type": "text", "inputName": "vin" },
-    { "name": "城市", "type": "select", "inputName": "city" },
     {
         "name": "车辆类型",
         "type": "select",
         "inputName": "carType",
-        "option": [{ id: 1, name: "轿车" }, { id: 2, name: "客车" }, { id: 3, name: "小型客车" }]
+        "option": [{ ename: "all", name: "" }, { ename: "car", name: "轿车" }, { ename: "heavybus", name: "中重型客车" }, { ename: "LightTrucks", name: "轻型卡车" },
+            { ename: "lightbus", name: "小型客车" }, { ename: "HeavyTrucks", name: "中重型货车" }
+        ]
     },
-    { "name": "动力类型", "type": "select", "inputName": "powertype" },
-    { "name": "车辆用途", "type": "select", "inputName": "caruse" }
 ];
 // 新增车辆
 var addcarInfo = [
@@ -77,3 +77,12 @@ $("#del_allcar").click(function() {
 
 
 creatSelect(carInfo_item, "#CarInfo .carInfo_top .form-inline", "carinfo_s_btn");
+// 查询
+$(".carinfo_s_btn").click(function() {
+    var subcar_data = $("#CarInfo .carInfo_top form").serialize();
+    var opt = "&carType=" + $("option:selected").attr("name");
+    subcar_data += opt;
+    var subcar_url = allurl + "/data-management/vehicle/pageQuery.json";
+    initTerAndCar(subcar_url, "searchCar", subcar_data);
+
+})

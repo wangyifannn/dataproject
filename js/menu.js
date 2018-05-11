@@ -51,17 +51,22 @@ function loadMenu() {
                     $(this).parent().addClass("active");
                 }
             });
-            initTerAndCar(allurl + "/data-management/vehicle/findVehicleByTerminalIsNotNull.json", "getUserCar");
 
+            initTerAndCar(allurl + "/data-management/vehicle/pageQuery.json", "getUserCar", { page: 1, size: 10 });
             $(".CarInfo").click(function() {
-                initTerAndCar(allurl + "data-management/vehicle/findVehicleByTerminalIsNotNull.json", "getUserCar");
+                initTerAndCar(allurl + "/data-management/vehicle/pageQuery.json", "getUserCar", { page: 1, size: 10 });
             })
             $(".TerInfo").click(function() {
-                initTerAndCar(allurl + "/data-management/customer/findTerminalByCustomer.json", "getUserTer");
+                initTerAndCar(allurl + "/data-management/terminal/query.json", "getUserTer", { page: 1, size: 10 });
             });
             // 车辆与终端绑定
             $(".carTerminalBind ").click(function() {
-                initTerAndCar(allurl + "/data-management/vehicle/findVehicleByTerminalIsNotNull.json", "getbind");
+                initTerAndCar(allurl + "/data-management/terminal/vehicleAndTerminal.json", "getbind", { page: 1, size: 10 });
+            });
+            // 文件下载
+            $(".fileDown ").click(function() {
+                // initTerAndCar(allurl + "/data-management/file/findAllFile.json", "getFile");
+                initTerAndCar("http://localhost/car/dataProject/json/file.json", "getFile");
             });
 
             // 点击选中切换页面并改变面包屑导航路径

@@ -1,16 +1,8 @@
 // 查询条件
 var terInfo_item = [
-    { "name": "终端编号", "type": "text", "inputName": "vsn" },
-    { "name": "终端条形码", "type": "text", "inputName": "vin" },
-    { "name": "VIN", "type": "text", "inputName": "city" },
-    { "name": "城市", "type": "select", "inputName": "city" },
-    {
-        "name": "车辆类型",
-        "type": "select",
-        "inputName": "cartype",
-        "option": [{ id: 1, name: "轿车" }, { id: 2, name: "客车" }, { id: 3, name: "小型客车" }]
-    },
-    { "name": "车辆用途", "type": "select", "inputName": "caruse" }
+    { "name": "终端编号", "type": "text", "inputName": "num" },
+    { "name": "终端条形码", "type": "text", "inputName": "barcode" },
+    { "name": "VIN", "type": "text", "inputName": "vin" }
 ];
 // 新增终端
 var addTerInfo = [
@@ -74,3 +66,9 @@ $("#del_ter").click(function() {
     var d = $("#terTable").bootstrapTable('getSelections');
     deletAll(d, "delTer");
 });
+// 终端查询
+$(".terinfo_s_btn").click(function() {
+    var subcar_data = $("#TerInfo .TerInfo_top .form-inline").serialize();
+    var subcar_url = allurl + "/data-management/terminal/query.json";
+    initTerAndCar(subcar_url, "searchTer", subcar_data);
+})

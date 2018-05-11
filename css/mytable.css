@@ -526,45 +526,12 @@ form#sumcar_search_form {
     margin-bottom: 0px;
 }
 
-.pagination-info,
-.page-list {
-    color: black;
-}
-
 .form-control {
     width: 80%;
 }
 
 input.form-control {
     background: white;
-}
-
-#maintainList table td:nth-child(9) {
-    background: #eee;
-}
-
-#maintainList table thead tr:nth-child(2) th:nth-child(3) {
-    background: #eee;
-}
-
-.role_check_box label,
-.role_menuList,
-.role_menuList label,
-#add_user_form .col-sm-8,
-#add_user_form .col-sm-8 label {
-    font-size: 13px;
-    color: #666 !important;
-}
-
-.sex-group {
-    margin-top: 7px;
-}
-
-#role .form-horizontal input,
-#add_user_form input {
-    color: #333;
-    vertical-align: middle;
-    margin: 0px 2px 0px 2px;
 }
 
 .role_check_box input {
@@ -575,6 +542,38 @@ input.form-control {
 .con_tab {
     max-height: 835px;
     overflow: hidden;
+}
+
+
+/*分页按钮*/
+
+.pageNav ul li.cur,
+.driverpage ul li.cur {
+    background-color: #1B6DDA;
+}
+
+.driverpage ul,
+.pageNav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.driverpage.pull-right {
+    margin-top: -15px;
+}
+
+.driverpage ul li,
+.pageNav ul li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #ddd;
 }
 
 

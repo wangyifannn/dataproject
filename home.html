@@ -70,7 +70,6 @@
             <div id="myTabContent" class="tab-content">
                 <!--车辆信息管理-->
                 <div class="tab-pane fade in active" id="CarInfo">
-                    <!--车辆信息管理-->
                     <div class="carInfo_top data_tab_box">
                         <form class="form-inline"></form>
                     </div>
@@ -95,12 +94,15 @@
                                     </a>
                                 </div>
                             </table>
+                            <!--后台分页-->
+                            <div class="driverpage pull-right">
+                                <ul></ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!--终端信息-->
                 <div class="tab-pane" id="TerInfo">
-                    终端信息
                     <div class="TerInfo_top data_tab_box">
                         <form class="form-inline"></form>
                     </div>
@@ -130,6 +132,10 @@
                                     </a>
                                 </div>
                             </table>
+                            <!--后台分页-->
+                            <div class="driverpage pull-right">
+                                <ul></ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,6 +165,10 @@
                                     </a>
                                 </div>
                             </table>
+                            <!--后台分页-->
+                            <div class="driverpage pull-right">
+                                <ul></ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,8 +224,8 @@
                     </div>
                 </div>
                 <!--文件下载-->
-                <div class="tab-pane fade" id="dataDown">
-                    <div class="data_tab_top clearfix data_tab_box">
+                <div class="tab-pane fade" id="fileDown">
+                    <div class="file_top clearfix data_tab_box">
                         <div class="input-group">
                             <label for="">车辆编号：</label>
                             <input type="text">
@@ -259,17 +269,19 @@
                     <div class="modal_body1 b_s">
                         <span class="tit">请选择在线车辆编号</span>
                         <div class="modal_choice1 b_s_choice">
-                            <select name="" id="" class="form-control">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select name="" class="form-control getvSn">
                             </select>
                         </div>
                     </div>
                     <div class="modal_body2 b_s">
-                        <span class="tit">请选择监测数据</span>
+                        <span class="tit">请选择监测参数</span>
                         <div class="modal_choice2 b_s_choice clearfix">
                         </div>
+                    </div>
+                    <div class="modal_btn_group">
+                        <!--notarize_gatherInfo_btn-->
+                        <button type="button" class="btn btn-default btn-primary n_g_btn" data-dismiss="" aria-label="">确定</button>
+                        <button type="button" class="btn btn-default btn-primary" data-dismiss="modal">取消</button>
                     </div>
                 </div>
             </div>
@@ -281,11 +293,12 @@
             <div class="modal-content">
                 <div class="modal-header model_title">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">解除绑定</h4>
+                    <h4 class="modal-title" id="myModalLabel">删除确认</h4>
                 </div>
                 <div class="modal-body clearfix">
-                    <div class="pull-left"><i class="glyphicon glyphicon-trash"></i></div>
-                    <div class="pull-right">确定要删除吗？</div>
+                    <div class="text-center">
+                        <i class="glyphicon glyphicon-trash"></i>&nbsp;&nbsp;<span>确认要删除吗？</span>
+                    </div>
                     <div class="form-group modal_btn_group">
                         <button type="button" class="btn btn-default btn-primary modal_del" data-dismiss="" aria-label="">是</button>
                         <button type="button" class="btn btn-default btn-primary" data-dismiss="modal">否</button>
@@ -334,12 +347,11 @@
 <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.js"></script>
-
 <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-table/1.11.1/extensions/export/bootstrap-table-export.js"></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.js"></script>
-
 <script type="text/javascript" src="https://cdn.bootcss.com/toastr.js/latest/toastr.min.js"></script>
 <script type="text/javascript" src="./js/laydate.js" charset="utf-8"></script>
+
 <script type="text/javascript" src="./js/menu.js" charset="utf-8"></script>
 <script type="text/javascript" src="./js/table.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
@@ -348,12 +360,12 @@
 <script type="text/javascript" src="./js/car.js"></script>
 <script type="text/javascript" src="./js/ter.js"></script>
 <script type="text/javascript" src="./js/bind.js"></script>
+<script type="text/javascript" src="./js/file.js"></script>
 
-<script src="./js/mychartsStyle.js">
-</script>
-<script type="text/javascript" src="./js/linechart.js"></script>
+<!--<script src="./js/mychartsStyle.js"></script>-->
+<!--<script type="text/javascript" src="./js/linechart.js"></script>-->
 
-<script type="text/javascript" src="./js/barchart.js"></script>
+<!--<script type="text/javascript" src="./js/barchart.js"></script>-->
 
 
 
